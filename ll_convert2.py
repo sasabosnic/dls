@@ -190,8 +190,6 @@ def fromDLS( recnum, bmap, lsd, section, township, range, meridian ):
 
     return lat, int
 
-
-
 class BCBlock:
     def __init__( self, num_lat, num_long ):
 	self.num_lat = int(num_lat)
@@ -255,9 +253,6 @@ class SinusoidalBlock( BCBlock ):
 
 	sublat, sublong = BCBlock.getSubLatLong( self, indices )
 	return lat+sublat, int+sublong
-	
-
-
 
 def fromBCNTS( recnum, blocks, b0, b1, b2, b3, b4, b5 ):
 
@@ -350,13 +345,6 @@ def convert( separator, replace_latlong, bmap, blocks ):
 		fields[long_col] = str(int)
 	    
 	print(separator.join( fields ))
-
-	
-	
-
-	    
-
-
 
 if __name__ == "__main__":
 
